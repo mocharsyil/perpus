@@ -15,44 +15,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <title>
-    Perpustakaan
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
-</head>
-
-<body class="g-sidenav-show   bg-gray-100">
-  <div class="min-height-75 bg-primary position-absolute w-100"></div>
-  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-        <img src="./assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Perpustakaan</span>
-      </a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+    <title>
+      Perpustakaan
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  </head>
+  
+  <body class="g-sidenav-show   bg-gray-100">
+    <div class="min-height-75 bg-primary position-absolute w-100"></div>
+    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+      <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+          <img src="/static/assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+          <span class="ms-1 font-weight-bold">Perpustakaan</span>
+        </a>
     </div>
     <hr class="horizontal dark mt-0">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./home">
+          <a class="nav-link" href="./kelolab">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">List Buku</span>
+            <span class="nav-link-text ms-1">Kelola Buku</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/kelolap">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Laporan Peminjaman</span>
           </a>
         </li>
         <li class="nav-item">
@@ -60,7 +68,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Pinjam Buku</span>
+            <span class="nav-link-text ms-1">Peminjaman Buku</span>
           </a>
         </li>
         <li class="nav-item">
@@ -68,7 +76,7 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Kembalikan Buku</span>
+            <span class="nav-link-text ms-1">Pengembalian Buku</span>
           </a>
           <li class="nav-item">
             <a class="nav-link " href="./pembayaran">
@@ -76,6 +84,14 @@
                 <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
               </div>
               <span class="nav-link-text ms-1">pembayaran</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./list">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">List Anggota</span>
             </a>
           </li>
         </li>
@@ -113,24 +129,54 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
-      <div class="row">
-        <div class="flex-container">
-          <div class="flex-left content-center">
-            <img src="http://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421541969/one-piece-vol-62-9781421541969_hr.jpg" width="110px" height="140px" alt="">
-          </div>
-          <div class="flex-center"> 
-            <p>Judul Buku: One Piece</p>
-            <p>Waktu Pinjam: 7 hari</p>
-            <p>Harga Denda: 1500/hari</p>
+      
+      <form class="form-horizontal" method="POST" action="/pinjam">
+        <input  type="hidden"/>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Nama Anggota: </label>
+                <div class="col-sm-10">
+                  <select name="name" >
+                    <% for (i=0; i < anggota.length; i++){ %>
+                    <option value="<%= anggota[i].id %>" class="form-style" ><%=anggota[i].name%></option>
+                      <% } %>
+                    </select> 
+                </div>
+        </div>
+        
 
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Nama Buku: </label>
+          <div class="col-sm-10">
+            <select name="name_buku" >
+                    <% for (i=0; i < buku.length; i++){ %>
+                    <option value="<%=buku[i].id%>" class="form-style" ><%=buku[i].nama_buku%></option>
+                      <% } %>
+                    </select> 
+                  </div>
+        </div>             
+
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tanggal Peminjaman: </label>
+            <div class="col-sm-10">
+                <input class="form-style" type="date" name="tanggal_pinjam" placeholder="Jenis Buku" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Tanggal kembali: </label>
+          <div class="col-sm-10">
+              <input class="form-style" type="date" name="tanggal_kembali" placeholder="Jenis Buku" required>
           </div>
-          <div class="flex-right content-center">
-            <form>
-              <button type="button">Pinjam</button>
-            </form>
-            
-          </div>
-        </div>            
+      </div>
+
+        <div class="form-group">
+            <br>
+            <input class="btn btn-success" type="submit" value="Save">
+            <a class="btn btn-danger" href="/kelolab" role="button">Back</a>
+        </div>
+    </form>
+</div>
     </div>
   </main>
   <div class="fixed-plugin">

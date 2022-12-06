@@ -3,7 +3,7 @@ const Users = require("../models/userModel.js");
 async function getUsers (req,res){
     try{
         const response = await Users.findAll()
-        res.render('listAnggota.ejs', {
+        res.render('admin.ejs', {
             users : response
         })
     } catch (e) {

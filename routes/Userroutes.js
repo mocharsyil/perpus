@@ -3,11 +3,11 @@ const router  = express.Router();
 const passport = require('passport');
 
 router.post('/login', passport.authenticate('local',{
-    successRedirect : '/home',
-    failureRedirect : '/'
+    successRedirect : '/kelolab',
+    failureRedirect : '/masuk'
 }));
 
-router.get ('/', (req, res)=>{
+router.get ('/masuk', (req, res)=>{
     res.render('login');
 });
 

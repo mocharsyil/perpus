@@ -18,21 +18,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
   <title>
     Perpustakaan
   </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+   <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+   <!-- Nucleo Icons -->
+   <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+   <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+   <!-- Font Awesome Icons -->
+   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+   <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+   <!-- CSS Files -->
+   <link id="pagestyle" href="/static/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -41,7 +41,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-        <img src="./assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="/static/assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold">Perpustakaan</span>
       </a>
     </div>
@@ -60,16 +60,33 @@
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Kelola Peminjaman</span>
+            <span class="nav-link-text ms-1">Laporan Peminjaman</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " href="./status">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Status Peminjaman</span>
-          </a>
+          <li class="nav-item">
+            <a class="nav-link " href="./pinjam">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Peminjaman Buku</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./kembalikan">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Pengembalian buku</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./pembayaran">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Pembayaran</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link " href="./list">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -117,6 +134,7 @@
 <div class="container">
   <table class="table table-striped table-dark">
     <thead class="thead-white">
+      
     <tr>
       
       <th scope="col"><font color = "#c4c3ca">Id Buku</font></th>
@@ -125,27 +143,28 @@
       <th scope="col"><font color = "#c4c3ca">Genre</th>
       <th scope="col"><font color = "#c4c3ca">Jenis</th>
       <th scope="col"><font color = "#c4c3ca">Denda</th>
-      <th scope="col"><font color = "#c4c3ca">Status</th>
       
       <th scope="col"><font color = "#c4c3ca">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td scope="col" align="center"> 1</td>
-      <td scope="col" align="center">One Piece</td>
-      <td scope="col" align="center">Eichiiro Oda</td>
-      <td scope="col" align="center">Action</td>
-      <td scope="col" align="center">Komik</td>
-      <td scope="col" align="center">1500</td>
-      <td scope="col" align="center">dipinjam</td>
-      <td scope="col">
-     
-        <a class="btn3 btn-primary" role="button" ><span>Edit</span></a>
-        <a class="btn4 btn-danger" role="button" ><span>Delete</span></a>
-      </td>
-    </tr>
-    </tbody>
+      <% for (let i=0; i < buku.length; i++){ %>
+      <tr>
+    
+            <td scope="col" align="center"><%= buku[i].id %></td>
+            <td scope="col" align="center"><%= buku[i].nama_buku %></td>
+            <td scope="col" align="center"><%= buku[i].author %></td>
+            <td scope="col" align="center"><%= buku[i].genre %></td>
+            <td scope="col" align="center"><%= buku[i].jenis %></td>
+            <td scope="col" align="center"><%= buku[i].denda %></td>
+            <td scope="col">
+              <a class="btn3 btn-primary" role="button" href="/editbuku/<%= buku[i].id %>" ><span>Edit</span></a>
+              <a class="btn4 btn-danger" role="button" href="/delete/<%= buku[i].id %>"><span>Delete</span></a>
+            </td>
+          </tr>
+              <% } %>
+    
+            </tbody>
   </table>
             
     </div>

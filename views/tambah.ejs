@@ -15,35 +15,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <title>
-    Perpustakaan
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
-</head>
-
-<body class="g-sidenav-show   bg-gray-100">
-  <div class="min-height-75 bg-primary position-absolute w-100"></div>
-  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-        <img src="./assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Perpustakaan</span>
-      </a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+    <title>
+      Perpustakaan
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="/static/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  </head>
+  
+  <body class="g-sidenav-show   bg-gray-100">
+    <div class="min-height-75 bg-primary position-absolute w-100"></div>
+    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+      <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+          <img src="/static/assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+          <span class="ms-1 font-weight-bold">Perpustakaan</span>
+        </a>
     </div>
     <hr class="horizontal dark mt-0">
       <ul class="navbar-nav">
@@ -70,6 +70,30 @@
             </div>
             <span class="nav-link-text ms-1">Status Peminjaman</span>
           </a>
+          <li class="nav-item">
+            <a class="nav-link " href="./pinjam">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Peminjaman Buku</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./kembalikan">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Pengembalian buku</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./pembayaran">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Pembayaran</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link " href="./list">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -115,54 +139,54 @@
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-sm-8">
-                <form class="form-horizontal" method="post" th:action="@{/create}" th:object="${student}">
-                    <input th:field="*{id}" type="hidden"/>
+                <form class="form-horizontal" method="POST" action="/tambah">
+                    <input  type="hidden"/>
                     <div class="form-group">
                         <label class="col-sm-4 control-label">Nama Buku: </label>
                             <div class="col-sm-10">
-                                <input class="form-style" type="text" id="firstName" placeholder="Nama Buku" required>
+                                <input class="form-style" type="text" name="nama_buku" placeholder="Nama Buku" required>
                             </div>
                     </div>
+                    
     
                     <div class="form-group">
-                        <label class="col-sm-4 control-label">Author: </label>
+                        <label class="col-sm-4 control-label">Gambar: </label>
                             <div class="col-sm-10">
-                                <input class="form-style" type="text" id="lastName" placeholder="Author" required>
+                                <input class="form-style" type="text" name="gambar" placeholder="link Gambar" required>
                             </div>
                     </div>
-    
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Author: </label>
+                      <div class="col-sm-10">
+                          <input class="form-style" type="text" name="author" placeholder="Author" required>
+                      </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Genre: </label>
                         <div class="col-sm-10">
-                            <input class="form-style" type="text" id="tanggal1" placeholder="Genre" required>
+                            <input class="form-style" type="text" name="genre" placeholder="Genre" required>
                         </div>
                     </div>
     
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Jenis Buku: </label>
+                        <label class="col-sm-2 control-label">Jenis: </label>
                         <div class="col-sm-10">
-                            <input class="form-style" type="text" id="tanggal2" placeholder="Jenis Buku" required>
+                            <input class="form-style" type="text" name="jenis" placeholder="Jenis Buku" required>
                         </div>
                     </div>
     
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Harga Denda: </label>
                         <div class="col-sm-10">
-                            <input class="form-style" type="text" id="kota1" placeholder="Harga Denda" required>
-                        </div>
-                    </div>
-    
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Status Buku: </label>
-                        <div class="col-sm-10">
-                            <input class="form-style" type="text" id="kota2" placeholder="Status Buku" required>
+                            <input class="form-style" type="number" name="denda"  placeholder="Harga Denda" required>
                         </div>
                     </div>
     
                     <div class="form-group">
                         <br>
                         <input class="btn btn-success" type="submit" value="Save">
-                        <a class="btn btn-danger" role="button">Back</a>
+                        <a class="btn btn-danger" href="/kelolab" role="button">Back</a>
                     </div>
                 </form>
             </div>
